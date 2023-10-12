@@ -1,6 +1,6 @@
 {
   console.time("split normal without spread");
-  for (let i = 0; i < 10_000; i++) {
+  for (let i = 0; i < 50_000; i++) {
     const hostname = "_gh_sess=IAMASESSIONCOOKIE; path=/; secure; HttpOnly; SameSite=Lax";
     const host = hostname.split(";")[0];
   }
@@ -8,7 +8,7 @@
 }
 {
   console.time("split normal with spread");
-  for (let i = 0; i < 10_000; i++) {
+  for (let i = 0; i < 50_000; i++) {
     const hostname = "_gh_sess=IAMASESSIONCOOKIE; path=/; secure; HttpOnly; SameSite=Lax";
     const [host] = hostname.split(";");
   }
@@ -16,7 +16,7 @@
 }
 {
   console.time("split with limit without spread");
-  for (let i = 0; i < 10_000; i++) {
+  for (let i = 0; i < 50_000; i++) {
     const hostname = "_gh_sess=IAMASESSIONCOOKIE; path=/; secure; HttpOnly; SameSite=Lax";
     const host = hostname.split(";", 1)[0];
   }
@@ -24,7 +24,7 @@
 }
 {
   console.time("split with limit with spread");
-  for (let i = 0; i < 10_000; i++) {
+  for (let i = 0; i < 50_000; i++) {
     const hostname = "_gh_sess=IAMASESSIONCOOKIE; path=/; secure; HttpOnly; SameSite=Lax";
     const [host] = hostname.split(";", 1);
   }
