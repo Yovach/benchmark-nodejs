@@ -9,8 +9,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "benchmarkify": "^4.0.0"
-  }
+  "license": "ISC"
 }
